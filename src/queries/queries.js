@@ -6,9 +6,21 @@ const allCharactersQuery = gql`
         results{
             name
             id
+            species
+            
         }
     }
 }
 `
+const ShowCharacterQuery = gql`
+    query ($id: ID) {
+        character(id: $id){
+            id
+            name
+        }
 
-export { allCharactersQuery };
+    }
+`
+
+
+export { allCharactersQuery, ShowCharacterQuery };

@@ -1,5 +1,8 @@
-import { InMemoryCache, ApolloClient, ApolloProvider } from '@apollo/client';
+import { InMemoryCache, ApolloClient } from '@apollo/client';
+
+import { ApolloProvider } from 'react-apollo'
 import CharactersList from './components/CharactersList';
+import ShowCharacter from './components/ShowCharacter'
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -12,6 +15,7 @@ function App() {
       <div className="main">
         <h1>Rick and Morty React GQL</h1>
           <CharactersList />
+          
       </div>
     </ApolloProvider>
   );
