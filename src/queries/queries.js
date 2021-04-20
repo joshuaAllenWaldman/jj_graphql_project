@@ -13,10 +13,11 @@ const allCharactersQuery = gql`
 }
 `
 const ShowCharacterQuery = gql`
-    query ($id: ID) {
-        character(id: $id){
+    query ($id: ID!) {
+        character(id: $id) {
             id
             name
+            species
         }
 
     }

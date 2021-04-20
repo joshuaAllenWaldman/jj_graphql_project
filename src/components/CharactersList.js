@@ -4,9 +4,13 @@ import ShowCharacter from './ShowCharacter'
 import { allCharactersQuery } from '../queries/queries';
 
 class CharactersList extends Component {
-    state = {
+    constructor(props){
+        super(props);
+        this.state = {
         selected: null
+        }
     }
+    
     displayCharacters(){
         const data = this.props.data;
         if (data.loading) {
@@ -24,7 +28,7 @@ class CharactersList extends Component {
         
     }
     render() {
-        console.log(this.props)
+        console.log(this.state)
         return(
             <div>
                 <ul>

@@ -3,9 +3,9 @@ import { graphql } from 'react-apollo';
 import { ShowCharacterQuery } from '../queries/queries';
 
 class ShowCharacter extends Component {
-
   render () {
-    console.log('asldjflaskdjflasf',this.props)
+    
+    console.log('asldjflaskdjflasf',this.props.data.character)
     return (
       <div>
         here we are
