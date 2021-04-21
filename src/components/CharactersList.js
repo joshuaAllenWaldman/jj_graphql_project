@@ -28,13 +28,14 @@ class CharactersList extends Component {
         
     }
     render() {
+        
         console.log(this.state)
         return(
             <div>
                 <ul>
                     {this.displayCharacters()}
                 </ul>
-                <ShowCharacter charId={this.state.selected}/>
+                {this.state.selected && <ShowCharacter charId={this.state.selected}/>}
             </div>
         )
     }
