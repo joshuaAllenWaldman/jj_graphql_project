@@ -9,8 +9,6 @@ const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql'
 });
 
-const client2 
-
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
   return (
