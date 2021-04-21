@@ -41,4 +41,12 @@ class CharactersList extends Component {
     }
 };
 
-export default graphql (allCharactersQuery)(CharactersList);
+export default graphql (allCharactersQuery, {
+    options: (props) => {
+        return {
+        variables: {
+            page: props.currentPage
+        }
+        }
+    }
+    })(CharactersList);

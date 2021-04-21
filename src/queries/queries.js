@@ -1,8 +1,8 @@
 import { gql } from 'apollo-boost';
 
 const allCharactersQuery = gql`
-    query {
-        characters{
+    query ($page: Int!){
+        characters (page: $page){
         results{
             name
             id
