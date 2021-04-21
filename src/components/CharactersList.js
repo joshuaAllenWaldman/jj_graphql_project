@@ -35,6 +35,8 @@ class CharactersList extends Component {
                 <ul>
                     {this.displayCharacters()}
                 </ul>
+                {this.props.currentPage > 1 && <button onClick={() => this.props.setCurrentPage(this.props.currentPage - 1)}>Previous Page</button>}
+                {this.props.currentPage < 34 && <button onClick={() => this.props.setCurrentPage(this.props.currentPage + 1)}>Next Page</button>}
                 {this.state.selected && <ShowCharacter charId={this.state.selected}/>}
             </div>
         )

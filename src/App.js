@@ -10,7 +10,7 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(4);
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <ApolloProvider client={client}>
       <div className="main">
