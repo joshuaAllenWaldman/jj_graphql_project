@@ -16,7 +16,7 @@ class CharactersList extends Component {
         if (data.loading) {
             return (<div>Loading Characters...</div>)
         } else {
-            console.log(data.characters.results)
+            // console.log(data.characters.results)
             return data.characters.results.map(char => {  
 
                 return (
@@ -29,9 +29,9 @@ class CharactersList extends Component {
     }
     render() {
         
-        console.log(this.state)
+        
         return(
-            <div>
+            <div className="listContainer">
                 <ul>
                     {this.displayCharacters()}
                 </ul>

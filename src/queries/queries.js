@@ -18,6 +18,7 @@ const ShowCharacterQuery = gql`
             id
             name
             species
+            image
         }
 
     }

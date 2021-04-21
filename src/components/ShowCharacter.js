@@ -3,12 +3,27 @@ import { graphql } from 'react-apollo';
 import { ShowCharacterQuery } from '../queries/queries';
 
 class ShowCharacter extends Component {
-  render () {
+  displayCharacter(){
     
-    console.log('asldjflaskdjflasf',this.props.data.character)
+    const data = this.props.data
+    if(data.character){
+      console.log(data.character)
+      return (
+        <div>
+          <h1>{data.character.name}</h1>
+          <img src={data.character.image} alt=""/>
+        </div>
+      )
+    } else {
+      return <div>Loading...</div>
+    }
+  }
+  
+  render () {
+    // console.log('asldjflaskdjflasf',this.props.data.character)
     return (
       <div>
-        here we are
+        {this.displayCharacter()}
       </div>
     )
     }
