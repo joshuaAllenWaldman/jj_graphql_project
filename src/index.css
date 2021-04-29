@@ -1,4 +1,17 @@
-.listContainer {
+.mainContainer {
   display: flex;
   justify-content: space-around;
+}
+
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.characterCommentForm {
+  display: flex;
+  flex-direction: column;
+  
 }

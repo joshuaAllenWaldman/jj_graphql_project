@@ -24,5 +24,15 @@ const ShowCharacterQuery = gql`
     }
 `
 
+const AddCharacterCard = gql`
+    mutation AddCharacterCard($name: String!, $comment: String!, $charId: ID!){
+        addCharacter(name: $name, comment: $comment, charId: $charId){
+            name
+            id
+            comment
+        }
+    }
+`
 
-export { allCharactersQuery, ShowCharacterQuery };
+
+export { allCharactersQuery, ShowCharacterQuery, AddCharacterCard };

@@ -41,13 +41,27 @@ const RootQuery = new GraphQLObjectType({
     }   
 });
 
-// const Mutation = new GraphQLObjectType({
-//     name: 'Mutation',
-//     fields: {
-//         addCharacter
-//     }
-// })
+const Mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+        addCharacterCard: {
+            type: CharacterCardType,
+            args: {
+                name: { type: GraphQLString },
+                comment: { type: GraphQLString }
+            }, 
+            resolve(parent, args) {
+                let characterCard = new CharacterCard({
+                    name: args.name,
+                    comment: args.comment
+                });
+                return characterCard.save()
+            }
+        }
+    }
+})
 
 module.exports = new GraphQLSchema({
-    query: RootQuery
+    query: RootQuery,
+    mutation: Mutation
 });
